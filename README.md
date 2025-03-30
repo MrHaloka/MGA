@@ -65,7 +65,6 @@ There's always a trade-off when deciding how to handle data in a multiplayer gam
 I'll be adding some extra links at the end that go more in-depth on each topic, so if you want to learn more, be sure to check them out.
 ## Useful Links
 
-## Useful Links
 
 - [Unreal Engine Architecture Character Movement Component In-Depth by delgoodie](https://www.youtube.com/watch?v=dOkuIvKCvpg)
 
