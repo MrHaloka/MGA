@@ -67,7 +67,8 @@ I'll be adding some extra links at the end that go more in-depth on each topic, 
 
 ## Useful Links
 
-- [Unreal Engine Architecture | Character Movement Component In-Depth by delgoodie](https://www.youtube.com/watch?v=dOkuIvKCvpg)  
+- [Unreal Engine Architecture | Character Movement Component In-Depth by delgoodie](https://www.youtube.com/watch?v=dOkuIvKCvpg)
+
 - [Server In-game Protocol Design and Optimization by Valve](https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods_in_Client/Server_In-game_Protocol_Design_and_Optimization)
 
 
