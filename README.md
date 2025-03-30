@@ -31,6 +31,7 @@ Now, what happens if it takes 100ms for the player to move from A to B, but the 
 5. Now the client expects to be at C, but the server says the player is at B, causing **rubberbanding**—the player gets teleported back to B because the server has authority.
 
 An important thing to note here is that the server is always in the past relative to the client, delayed by at least the player's ping (in this case, 200ms).
+![Prediction](Prediction.jpg)
 
 ### Solving Rubberbanding with Request IDs
 
@@ -43,13 +44,27 @@ When the server receives **Request #1** and updates the state, the client knows 
 
 ## Lag Compensation
 
-Now that we know the server is in the past, what happens if a player with 200ms ping aims and shoots at an opponent? They miss—because by the time the fire request reaches the server, 200ms later, the target may have already moved. 
+Now that we know the server is in the past, what happens if a player with 100ms ping aims and shoots at an opponent? They miss—because by the time the fire request reaches the server, 100ms later, the target may have already moved. 
 
 This is frustrating for players. The player aimed perfectly at the target, but they still got punished just because of their connection delay.
 
+![Lag Compensation](LagCompensation.jpg)
+
+> [!NOTE]  
+> The red character is what the player aims at and sees on their client, and after 100ms, when the shot request reaches the server, the green character is what the server uses to calculate if the shot hits.
 ### What is Lag Compensation?
 
 In simple terms, **lag compensation** means the server stores a history of the game world. When a player fires a shot, the server rewinds time to the moment the player actually pulled the trigger (from the client’s perspective) and checks if the shot hit anything at that point in time.
 
 This way, players hit what they see, rather than suffering from server delay.
+
+## Conclusion
+
+There's always a trade-off when deciding how to handle data in a multiplayer game. Prioritizing responsiveness might introduce inconsistencies, while enforcing strict server authority can make the game feel unresponsive. Finding the right balance is what makes networking a fun and unique challenge for developers.
+
+I'll be adding some extra links at the end that go more in-depth on each topic, so if you want to learn more, be sure to check them out.
+## Useful Links
+
+- [Unreal Engine Architecture | Character Movement Component In-Depth by delgoodie](https://www.youtube.com/watch?v=dOkuIvKCvpg)
+- [Server In-game Protocol Design and Optimization by Valve](https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods_in_Client/Server_In-game_Protocol_Design_and_Optimization)
 
