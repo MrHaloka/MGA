@@ -1,4 +1,4 @@
-# Secure Multiplayer Game Design
+# Multiplayer Game Design
 
 In multiplayer games, we can't simply trust player input because players can cheat. So here's an important rule you always need to remember: **never trust the client**—it can modify every request it sends.
 
