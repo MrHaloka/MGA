@@ -52,6 +52,7 @@ This is frustrating for players. The player aimed perfectly at the target, but t
 
 > [!NOTE]  
 > The red character is what the player aims at and sees on their client, and after 100ms, when the shot request reaches the server, the green character is what the server uses to calculate if the shot hits.
+
 ### What is Lag Compensation?
 
 In simple terms, **lag compensation** means the server stores a history of the game world. When a player fires a shot, the server rewinds time to the moment the player actually pulled the trigger (from the client’s perspective) and checks if the shot hit anything at that point in time.
